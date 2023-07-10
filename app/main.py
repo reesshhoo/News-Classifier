@@ -26,8 +26,8 @@ class PredictionDetails(db.Model):
 
 
 
-model: Pipeline = joblib.load("../model/category_predictor.sav")
-Encoder = joblib.load("../model/Encoder.sav")
+model: Pipeline = joblib.load("model/category_predictor.sav")
+Encoder = joblib.load("model/Encoder.sav")
 
 
 def predict(text):
