@@ -2,6 +2,10 @@ aniso8601
 async-generator
 blinker
 certifi
+requests
+flask-sqlalchemy
+nltk
+bs4
 charset-normalizer
 click
 dnspython
