@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} All the results {% endblock %} {% block content %}
+<div class="container">
+  <a href="/" class="btn btn-primary mt-3">Go back to Homepage</a>
+  <table class="table mt-3">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Url</th>
+        <th scope="col">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for result in data %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td><a href="{{result.url}}" target="_blank">{{result.url}}</a></td>
+        <td>{{result.category}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

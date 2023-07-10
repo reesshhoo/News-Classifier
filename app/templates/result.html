@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block title %} Result {% endblock %} {% block content %}
+<div class="container">
+  <div class="card mt-3">
+    <div class="card-body">
+      <h1 class="card-title mt-3">Result for the requested URL</h1>
+      <p class="card-text mt-3">{{url}}</p>
+      <p class="card-text mt-3">Category for the above news article is <strong>{{result.upper()}}</strong></p>
+      <h4 class="card-subtitle mt-3">Following content was scraped from the URL</h4>
+      <p class="card-text mt-3">{{content}}</p>
+      <a href="/" class="btn btn-primary">Homepage</a>
+      <a href="/delete/{{id}}" class="btn btn-danger">Delete this result from database</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
